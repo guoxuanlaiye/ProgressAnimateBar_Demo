@@ -13,6 +13,7 @@
 		4DF085FA1E5EAC1000B56083 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF085F81E5EAC1000B56083 /* Main.storyboard */; };
 		4DF085FC1E5EAC1000B56083 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF085FB1E5EAC1000B56083 /* Assets.xcassets */; };
 		4DF085FF1E5EAC1000B56083 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF085FD1E5EAC1000B56083 /* LaunchScreen.storyboard */; };
+		4DF086081E5EAEFF00B56083 /* GXProgressRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF086071E5EAEFF00B56083 /* GXProgressRateView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		4DF085FB1E5EAC1000B56083 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DF085FE1E5EAC1000B56083 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DF086001E5EAC1000B56083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DF086061E5EAEFF00B56083 /* GXProgressRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GXProgressRateView.h; sourceTree = "<group>"; };
+		4DF086071E5EAEFF00B56083 /* GXProgressRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GXProgressRateView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 		4DF085EE1E5EAC1000B56083 /* ProgressAnimateBar_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				4DF086061E5EAEFF00B56083 /* GXProgressRateView.h */,
+				4DF086071E5EAEFF00B56083 /* GXProgressRateView.m */,
 				4DF085F21E5EAC1000B56083 /* AppDelegate.h */,
 				4DF085F31E5EAC1000B56083 /* AppDelegate.m */,
 				4DF085F51E5EAC1000B56083 /* ViewController.h */,
@@ -152,6 +157,7 @@
 			files = (
 				4DF085F71E5EAC1000B56083 /* ViewController.m in Sources */,
 				4DF085F41E5EAC1000B56083 /* AppDelegate.m in Sources */,
+				4DF086081E5EAEFF00B56083 /* GXProgressRateView.m in Sources */,
 				4DF085F11E5EAC1000B56083 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

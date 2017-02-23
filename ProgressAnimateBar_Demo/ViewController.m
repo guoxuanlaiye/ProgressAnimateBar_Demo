@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GXProgressRateView.h"
 
 @interface ViewController ()
 
@@ -16,14 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    GXProgressRateView * progressView = [[GXProgressRateView alloc]initWithFrame:CGRectMake(100, 100, 40, 40)];
+    [progressView updateProgressRate:0.694];
+    progressView.animateEnabled = YES;
+    progressView.rateLabelFont  = [UIFont systemFontOfSize:12.0]; 
+    [self.view addSubview:progressView];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end
