@@ -10,7 +10,6 @@
 
 @interface GXProgressRateView ()
 {
-    NSLock * _theLock;
     CGFloat _number;
 }
 @property (nonatomic, strong) UIView  * progressView;
@@ -25,7 +24,6 @@
 - (void)dealloc {
     [_timer invalidate];
     _timer = nil;
-    [_theLock unlock];
 }
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self == [super initWithFrame:frame]) {
@@ -59,18 +57,12 @@
     }
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        if (!_theLock) {
-            _theLock = [[NSLock alloc]init];
-        }
-        [_theLock lock];
-        
         if (_animateEnabled) { //带动画
             
             _timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(timerClick) userInfo:nil repeats:YES];
         } else { //不带动画
             
             dispatch_async(dispatch_get_main_queue(), ^{
-                
                 
                 self.progressNumLabel.text = [NSString stringWithFormat:@"%.1f%%",rate * 100];
                 //不断重新画圈圈
@@ -91,7 +83,6 @@
         NSRunLoop * loop    = [NSRunLoop currentRunLoop];
         CFRunLoopRef cfloop = [loop getCFRunLoop];
         CFRunLoopStop(cfloop);
-        [_theLock unlock];
         return;
     }
     
