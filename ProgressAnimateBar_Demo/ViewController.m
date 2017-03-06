@@ -19,9 +19,9 @@
     [super viewDidLoad];
 
     GXProgressRateView * progressView = [[GXProgressRateView alloc]initWithFrame:CGRectMake(100, 100, 40, 40)];
-    [progressView updateProgressRate:0.694];
     progressView.animateEnabled = YES;
-    progressView.rateLabelFont  = [UIFont systemFontOfSize:12.0]; 
+    progressView.rateLabelFont  = [UIFont systemFontOfSize:12.0];
+    [progressView updateProgressRate:0.694];
     [self.view addSubview:progressView];
 }
 
