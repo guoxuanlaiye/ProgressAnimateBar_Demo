@@ -74,6 +74,7 @@
             //开启子线程的runloop，保活此定时器
             NSRunLoop * loop = [NSRunLoop currentRunLoop];
             [loop run];
+            
         });
 
     } else {
@@ -91,8 +92,7 @@
         [_timer invalidate];
         _timer  = nil;
         _number = 0;
-        NSRunLoop * loop    = [NSRunLoop currentRunLoop];
-        CFRunLoopRef cfloop = [loop getCFRunLoop];
+        CFRunLoopRef cfloop = CFRunLoopGetCurrent();
         CFRunLoopStop(cfloop);
         return;
     }
@@ -106,7 +106,7 @@
     });
 }
 
-#pragma mark - Private 画一个背景圈
+#pragma mark - Private 画一个背景填充圈
 - (void)quarzFullCircle:(UIView *)view{
     
     UIBezierPath *fullCircle =
